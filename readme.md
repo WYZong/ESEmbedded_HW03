@@ -49,8 +49,17 @@ This is the hw03 sample. Please follow the steps below.
 
 --------------------
 
-- [x] If you volunteer to give the presentation next week, check this.**
+- [] **If you volunteer to give the presentation next week, check this.**
 
 --------------------
+In main.c: to understand how do arguments and function pass and return parameters.
+![environment_code](https://github.com/WYZong/ESEmbedded_HW03/blob/master/pic/hw3_setting.png)
+1. set the argument: 1,2,3,4 and send to fun1 
+2. how do fun1 operate and return parameter (a+b+c+d)
+3. how do parameter return to reset-function
 
-**★★★ Please take your note here ★★★**
+This is ABI for ARM
+![environment_code](https://github.com/WYZong/ESEmbedded_HW03/blob/master/pic/hw3_binary.png)
+First, put the value of variables we set to the register r0,r1,r2,r3 and go to the fun1 when we call it.
+Second, put the r7 into stack and shift the r7 and sp at a low address.take the register r0,r1,r2,r3 we set to another place and add one by one and then store the result at r0 register.
+Finally, take the r7 and sp back to the origin address and save the r0.
